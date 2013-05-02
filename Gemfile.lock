@@ -1,0 +1,15 @@
+GIT
+  remote: git://github.com/deltadd/Qif.git
+  revision: 13a2b4f286ba20fa34e91183a77db38c0d5580f9
+  specs:
+    qif (1.1.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  qif!

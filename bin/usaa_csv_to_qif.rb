@@ -5,6 +5,8 @@ unless ARGV.size == 2
   exit
 end
 
+require './lib/usaa_csv_to_qif'
+
 input_file = ARGV.shift
 output_file = ARGV.shift
 input_csv = File.read(input_file)

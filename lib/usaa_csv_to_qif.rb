@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'bundler/setup'
+
 require 'csv'
 require 'stringio'
 require 'qif'
@@ -21,11 +24,9 @@ module UsaaCsvToQif
 
   def self.transaction_from_csv_row(row)
     attrs = {
-      date: row[2], amount: row[6], memo: row[5], payee: row[4]
+      date: row[2], amount: row[6], memo: row[5], payee: row[4], 
+      number: row[3]
     }
-    if attrs[:payee] =~ /^CHECK # (\d+)\s*$/
-      attrs[:number] = $1.to_i
-    end
     Qif::Transaction.new(attrs)
   end
 end
